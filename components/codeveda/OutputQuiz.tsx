@@ -31,7 +31,7 @@ export default function OutputQuiz() {
       <p style={{ margin: "0", fontSize: "21px", fontWeight: "700", letterSpacing: "-0.02em" }}>
         What does this log?
       </p>
-      <pre style={{ margin: "0", padding: "16px 18px", background: "#15123A", color: "#FFF7EA", borderRadius: "14px", fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace", fontSize: "14px", lineHeight: "1.8", overflowX: "auto" }}><code><span style={{ color: "#B9A6FF" }}>{"const"}</span>{" langs = ["}<span style={{ color: "#3DDC97" }}>{"\"py\""}</span>{", "}<span style={{ color: "#3DDC97" }}>{"\"js\""}</span>{"];\nlangs."}<span style={{ color: "#7CC4FF" }}>{"push"}</span>{"("}<span style={{ color: "#3DDC97" }}>{"\"go\""}</span>{");\nconsole."}<span style={{ color: "#7CC4FF" }}>{"log"}</span>{"(langs.length);"}</code></pre>
+      <pre className="kl-code" style={{ margin: "0", padding: "16px 18px", background: "#15123A", color: "#FFF7EA", borderRadius: "14px", fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace", fontSize: "14px", lineHeight: "1.8", overflowX: "auto" }}><code><span style={{ color: "#B9A6FF" }}>{"const"}</span>{" langs = ["}<span style={{ color: "#3DDC97" }}>{"\"py\""}</span>{", "}<span style={{ color: "#3DDC97" }}>{"\"js\""}</span>{"];\nlangs."}<span style={{ color: "#7CC4FF" }}>{"push"}</span>{"("}<span style={{ color: "#3DDC97" }}>{"\"go\""}</span>{");\nconsole."}<span style={{ color: "#7CC4FF" }}>{"log"}</span>{"(langs.length);"}</code></pre>
       <div role="group" aria-label="Answers" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "10px" }}>
         {answers.map((a, i) => (
           <Fragment key={i}>

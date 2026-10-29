@@ -650,7 +650,7 @@ export default async function HomePage() {
           </section>
           <section id="follow" style={{ padding: "0 clamp(16px, 4vw, 40px) clamp(64px, 8vw, 112px)" }}>
             <div className="kl-reveal" style={{ position: "relative", overflow: "hidden", maxWidth: "1120px", margin: "0 auto", padding: "clamp(36px, 5vw, 64px)", borderRadius: "36px", background: "#1B2A44", color: "#FFFFFF", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "32px 56px" }}>
-              <span aria-hidden="true" style={{ position: "absolute", right: "-60px", top: "-70px", width: "220px", height: "220px", borderRadius: "999px", background: "#FEAE33" }} />
+              <span aria-hidden="true" className="kl-follow-dot" style={{ position: "absolute", right: "-60px", top: "-70px", width: "220px", height: "220px", borderRadius: "999px", background: "#FEAE33" }} />
               <svg aria-hidden="true" viewBox="0 0 200 200" style={{ position: "absolute", left: "-50px", bottom: "-70px", width: "240px", height: "240px", transform: "rotate(-24deg)" }}>
                 <path d="M20 180 C 20 90, 80 20, 180 20 C 180 120, 120 180, 20 180 Z" fill="#1BA982" fillOpacity="0.28" />
               </svg>

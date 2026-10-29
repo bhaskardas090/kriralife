@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import ResponsiveNav from "@/components/ResponsiveNav";
 import FlexPlayground from "@/components/codeveda/FlexPlayground";
 import OutputQuiz from "@/components/codeveda/OutputQuiz";
 import { codevedaFonts } from "@/lib/fonts";
@@ -97,11 +98,18 @@ export default function CodevedaPage() {
       <JsonLd data={jsonLd} />
       <div className={`page-codeveda ${codevedaFonts}`} style={{ width: "100%", background: "#15123A", color: "#15123A", fontFamily: "var(--font-bricolage), system-ui, sans-serif" }}>
         <header style={{ position: "sticky", top: "0", zIndex: "20", background: "rgba(21,18,58,0.94)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(255,247,234,0.1)" }}>
-          <nav aria-label="Primary" style={{ maxWidth: "1200px", margin: "0 auto", padding: "12px clamp(16px, 4vw, 40px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "8px 24px" }}>
+          <nav aria-label="Primary" className="kl-header-nav" style={{ maxWidth: "1200px", margin: "0 auto", padding: "12px clamp(16px, 4vw, 40px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "8px 24px" }}>
             <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "44px", textDecoration: "none", color: "#FFF7EA", fontWeight: "700", fontSize: "20px", letterSpacing: "-0.02em" }}>
               <img src="/images/kriralife-logo-light.png" alt="Kriralife" width="121" height="34" style={{ display: "block", width: "auto", height: "34px" }} decoding="async" />
             </Link>
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px" }}>
+            <ResponsiveNav
+              theme={{ ink: "#FFF7EA", border: "rgba(255,247,234,0.28)", panelBg: "#15123A" }}
+              cta={
+                <a href="https://www.codeveda.dev/courses" style={{ display: "inline-flex", alignItems: "center", minHeight: "44px", padding: "0 18px", marginLeft: "8px", borderRadius: "12px", border: "2px solid #0A0820", textDecoration: "none", color: "#FFFFFF", background: "#6B4CF6", boxShadow: "3px 3px 0 #0A0820", fontSize: "15px", fontWeight: "700" }}>
+                  Start reading
+                </a>
+              }
+            >
               <Link href="/" style={{ display: "inline-flex", alignItems: "center", minHeight: "44px", padding: "0 14px", borderRadius: "999px", textDecoration: "none", color: "#D6D2EA", fontSize: "15px", fontWeight: "500" }}>
                 Home
               </Link>
@@ -113,10 +121,7 @@ export default function CodevedaPage() {
                 <span aria-hidden="true" style={{ width: "8px", height: "8px", borderRadius: "3px", background: "#E0577A" }} />
                 ForeverDays
               </Link>
-              <a href="https://www.codeveda.dev/courses" style={{ display: "inline-flex", alignItems: "center", minHeight: "44px", padding: "0 18px", marginLeft: "8px", borderRadius: "12px", border: "2px solid #0A0820", textDecoration: "none", color: "#FFFFFF", background: "#6B4CF6", boxShadow: "3px 3px 0 #0A0820", fontSize: "15px", fontWeight: "700" }}>
-                Start reading
-              </a>
-            </div>
+            </ResponsiveNav>
           </nav>
         </header>
         <main id="main">

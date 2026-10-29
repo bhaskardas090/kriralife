@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import ResponsiveNav from "@/components/ResponsiveNav";
 import { CONTACT_EMAIL, ROUTES } from "@/lib/site";
 
 // Header and footer shared by the ForeverDays landing page and its privacy policy.
@@ -10,11 +11,18 @@ const footerLink: CSSProperties = { display: "inline-flex", alignItems: "center"
 export function ForeverDaysHeader({ current }: { current: "app" | "privacy" }) {
   return (
     <header style={{ position: "sticky", top: "0", zIndex: "20", background: "rgba(245,239,232,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E8DED4" }}>
-      <nav aria-label="Primary" style={{ maxWidth: "1200px", margin: "0 auto", padding: "12px clamp(16px, 4vw, 40px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "8px 24px" }}>
+      <nav aria-label="Primary" className="kl-header-nav" style={{ maxWidth: "1200px", margin: "0 auto", padding: "12px clamp(16px, 4vw, 40px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "8px 24px" }}>
         <Link href={ROUTES.home} style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "44px", textDecoration: "none", color: "#1E1A1A", fontFamily: "var(--font-bricolage), var(--font-inter), sans-serif", fontWeight: "700", fontSize: "20px", letterSpacing: "-0.02em" }}>
           <img src="/images/kriralife-logo.png" alt="Kriralife" width="121" height="34" style={{ display: "block", width: "auto", height: "34px" }} decoding="async" />
         </Link>
-        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px" }}>
+        <ResponsiveNav
+          theme={{ ink: "#1E1A1A", border: "#E3D8CD", panelBg: "#F5EFE8" }}
+          cta={
+            <Link href={`${ROUTES.foreverdays}#get`} style={{ ...navLink, padding: "0 18px", marginLeft: "8px", color: "#FFFFFF", background: "#B33650", fontWeight: "600" }}>
+              Get the app
+            </Link>
+          }
+        >
           <Link href={ROUTES.home} style={navLink}>
             Home
           </Link>
@@ -26,10 +34,7 @@ export function ForeverDaysHeader({ current }: { current: "app" | "privacy" }) {
             <span aria-hidden="true" style={{ width: "8px", height: "8px", borderRadius: "3px", background: "#B33650" }} />
             ForeverDays
           </Link>
-          <Link href={`${ROUTES.foreverdays}#get`} style={{ ...navLink, padding: "0 18px", marginLeft: "8px", color: "#FFFFFF", background: "#B33650", fontWeight: "600" }}>
-            Get the app
-          </Link>
-        </div>
+        </ResponsiveNav>
       </nav>
     </header>
   );

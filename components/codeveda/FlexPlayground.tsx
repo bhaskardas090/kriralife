@@ -21,7 +21,9 @@ export default function FlexPlayground() {
 
   return (
     <div className="kl-reveal" style={{ marginTop: "48px", display: "flex", flexWrap: "wrap", background: "#FFF7EA", color: "#15123A", border: "2px solid #0A0820", borderRadius: "26px", boxShadow: "10px 10px 0 #7B5CFF", overflow: "hidden" }}>
-      <div style={{ flex: "1 1 340px", minWidth: "0", padding: "28px", borderRight: "2px solid #15123A", display: "flex", flexDirection: "column", gap: "24px" }}>
+      {/* Divider drawn on both the right and bottom edges; the card's overflow:hidden clips whichever
+          one lands on the card's outer edge, so it reads correctly side by side and when stacked. */}
+      <div style={{ flex: "1 1 340px", minWidth: "0", padding: "28px", boxShadow: "2px 0 0 #15123A, 0 2px 0 #15123A", display: "flex", flexDirection: "column", gap: "24px" }}>
         <div>
           <span style={{ display: "block", marginBottom: "10px", fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace", fontSize: "14px", fontWeight: "700" }}>
             justify-content
@@ -103,7 +105,7 @@ export default function FlexPlayground() {
             A
           </div>
         </div>
-        <pre style={{ margin: "0", padding: "18px 20px", background: "#15123A", color: "#FFF7EA", borderRadius: "16px", fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace", fontSize: "14px", lineHeight: "1.8", overflowX: "auto" }}><code>{".container {\n  display: "}<span style={{ color: "#7CC4FF" }}>{"flex"}</span>{";\n  justify-content: "}<span style={{ color: "#FFD23F" }}>{jc}</span>{";\n  align-items: "}<span style={{ color: "#3DDC97" }}>{ai}</span>{";\n}"}</code></pre>
+        <pre className="kl-code" style={{ margin: "0", padding: "18px 20px", background: "#15123A", color: "#FFF7EA", borderRadius: "16px", fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace", fontSize: "14px", lineHeight: "1.8", overflowX: "auto" }}><code>{".container {\n  display: "}<span style={{ color: "#7CC4FF" }}>{"flex"}</span>{";\n  justify-content: "}<span style={{ color: "#FFD23F" }}>{jc}</span>{";\n  align-items: "}<span style={{ color: "#3DDC97" }}>{ai}</span>{";\n}"}</code></pre>
       </div>
     </div>
   );
