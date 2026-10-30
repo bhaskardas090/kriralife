@@ -34,6 +34,7 @@ const jsonLd = {
       url: pageUrl,
       description,
       applicationCategory: "LifestyleApplication",
+      operatingSystem: "iOS, Android",
       image: absoluteUrl("/images/foreverdays-icon.webp"),
       screenshot: [
         absoluteUrl("/images/foreverdays-upcoming.webp"),
@@ -46,6 +47,7 @@ const jsonLd = {
         "Reminders at the exact day and time you pick",
         "Preparation checklists",
         "Festival calendars, such as Festivals in India",
+        "Backup and sync across iPhone and Android",
       ],
       publisher: ORG_REF,
     },
@@ -113,7 +115,7 @@ export default function ForeverDaysPage() {
                 </a>
               </div>
               <p className="kl-in" style={{ animationDelay: "340ms", margin: "22px 0 0", fontSize: "14px", color: "#6E6660" }}>
-                Available on [iOS · Android (soon)]
+                For iPhone and Android
               </p>
             </div>
             <div style={{ flex: "1 1 480px", minWidth: "0", display: "flex", justifyContent: "center" }}>
@@ -386,7 +388,7 @@ export default function ForeverDaysPage() {
                 </a>
               </div>
               <p style={{ margin: "18px 0 0", fontSize: "14px", color: "#6E6660" }}>
-                Available on [iOS · Android] · [free / your pricing]
+                For iPhone and Android · Free to download, with an optional Pro plan
               </p>
             </div>
           </section>

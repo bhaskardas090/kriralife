@@ -30,7 +30,7 @@ NEXT_PUBLIC_SITE_URL=https://www.example.com npm run build
 
 ## Placeholders still to fill in
 
-Search the code for `[` and `href="#"`: `[Your Name]`, app store links (`Get the app [link]`), `[iOS · Android]`,
+Search the code for `[` and `href="#"`: `[Your Name]`, app store links (`Get the app [link]`),
 the ForeverDays journal `[Date]`, GitHub/LinkedIn/Instagram/X links, Privacy/Terms pages, the maker portrait,
 and `you@example.com` in the ForeverDays footer. The newsletter form (`components/home/NewsletterForm.tsx`)
 needs wiring to an email provider.

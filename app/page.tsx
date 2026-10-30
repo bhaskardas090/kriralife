@@ -486,7 +486,7 @@ export default async function HomePage() {
                     </a>
                   </div>
                   <p style={{ margin: "0", fontSize: "14px", color: "#6E6660" }}>
-                    Available on [iOS · Android (soon)]
+                    For iPhone and Android
                   </p>
                 </div>
                 <div style={{ flex: "1 1 460px", minWidth: "0", background: "#EFE6DC", padding: "clamp(28px, 4vw, 56px) clamp(16px, 3vw, 40px)", display: "flex", alignItems: "center", justifyContent: "center" }}>

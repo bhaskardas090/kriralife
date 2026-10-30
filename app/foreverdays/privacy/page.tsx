@@ -7,8 +7,8 @@ import { foreverdaysFonts } from "@/lib/fonts";
 import { pageMetadata } from "@/lib/metadata";
 import { CONTACT_EMAIL, ROUTES, SITE_NAME, WEBSITE_REF, absoluteUrl } from "@/lib/site";
 
-// Every statement here should match what the ForeverDays iOS app actually does
-// (ai-projects/forever-days). When the app starts collecting something new, update
+// Every statement here should match what the ForeverDays iOS and Android apps actually
+// do (ai-projects/forever-days). When either app starts collecting something new, update
 // this page and LAST_UPDATED before shipping that version.
 const LAST_UPDATED = { iso: "2026-10-30", label: "October 30, 2026" };
 
@@ -60,7 +60,7 @@ const SECTIONS = [
   { id: "not-collect", title: "What we don't collect" },
   { id: "use", title: "How we use it" },
   { id: "storage", title: "Where it's stored and who processes it" },
-  { id: "on-device", title: "What stays on your iPhone" },
+  { id: "on-device", title: "What stays on your phone" },
   { id: "others", title: "Information about other people" },
   { id: "sharing", title: "Sharing" },
   { id: "deletion", title: "Keeping and deleting your data" },
@@ -131,7 +131,7 @@ export default function ForeverDaysPrivacyPage() {
             Privacy <em style={{ color: accent }}>Policy</em>
           </h1>
           <p style={{ margin: "18px 0 0", fontSize: "15px", color: "#6E6660" }}>
-            Last updated <time dateTime={LAST_UPDATED.iso}>{LAST_UPDATED.label}</time> · Applies to the ForeverDays app for iPhone and this website.
+            Last updated <time dateTime={LAST_UPDATED.iso}>{LAST_UPDATED.label}</time> · Applies to the ForeverDays apps for iPhone and Android and this website.
           </p>
 
           <nav aria-label="On this page" style={{ marginTop: "36px", padding: "22px 24px", background: "#FDFBF9", border: "1px solid #E8DED4", borderRadius: "20px" }}>
@@ -147,9 +147,9 @@ export default function ForeverDaysPrivacyPage() {
 
           <Section id="summary">
             <List>
-              <li>Your dates, people, notes, checklists, reminders and memories are saved on your iPhone and backed up to your account so they survive a lost or new phone.</li>
+              <li>Your dates, people, notes, checklists, reminders and memories are saved on your phone and backed up to your account so they survive a lost or new phone.</li>
               <li>Only you can read your backup. We don&apos;t sell your data, show ads, or track you across other apps and websites.</li>
-              <li>We use a few Google Firebase services to run the backup and to spot crashes and slow screens.</li>
+              <li>We use a few Google Firebase services to run the backup and to spot crashes and other problems.</li>
               <li>You can delete everything, or your whole account, from inside the app at any time.</li>
             </List>
           </Section>
@@ -163,7 +163,7 @@ export default function ForeverDaysPrivacyPage() {
           <Section id="collect">
             <H3>Your account</H3>
             <P>
-              ForeverDays asks you to sign in with <B>Apple</B> or <B>Google</B> so your data can be backed up and restored. From that sign-in we receive your <B>name</B>, your <B>email address</B> and a <B>unique account ID</B>. With Sign in with Apple you can choose to hide your email; we then only see Apple&apos;s private relay address. We never see your Apple or Google password.
+              ForeverDays asks you to sign in so your data can be backed up and restored: with <B>Apple</B> or <B>Google</B> on iPhone, and with <B>Google</B> on Android. From that sign-in we receive your <B>name</B>, your <B>email address</B> and a <B>unique account ID</B>. With Sign in with Apple you can choose to hide your email; we then only see Apple&apos;s private relay address. We never see your Apple or Google password.
             </P>
 
             <H3>What you add to the app</H3>
@@ -178,37 +178,37 @@ export default function ForeverDaysPrivacyPage() {
 
             <H3>Photos you choose</H3>
             <P>
-              ForeverDays uses Apple&apos;s photo picker, so the app only receives the photos you pick — it can&apos;t see the rest of your library. Photos are resized and saved on your iPhone, then backed up (see <a href="#storage" style={{ color: accent }}>where it&apos;s stored</a>).
+              ForeverDays uses your phone&apos;s built-in photo picker, so the app only receives the photos you pick — it can&apos;t see the rest of your library. Photos are resized and saved on your phone, then backed up (see <a href="#storage" style={{ color: accent }}>where it&apos;s stored</a>).
             </P>
 
             <H3>Account and device details</H3>
             <P>
-              To support you and understand who uses the app, your account&apos;s profile stores: your plan (Free or Pro), how you signed in, the app version, iOS version, iPhone model, your device&apos;s region and language settings, your time zone, when the account was created, and when you last signed in and last opened the app.
+              To support you and understand who uses the app, your account&apos;s profile stores: your plan (Free or Pro), how you signed in, whether you use iPhone or Android, the app version, iOS or Android version, phone model, your device&apos;s region and language settings, your time zone, when the account was created, and when you last signed in and last opened the app.
             </P>
 
             <H3>Diagnostics and usage</H3>
-            <P>The app includes three Google Firebase tools that collect technical data automatically:</P>
+            <P>The app includes Google Firebase tools that collect technical data automatically:</P>
             <List>
-              <li><B>Firebase Crashlytics</B> — crash reports: what the app was doing when it crashed, device model, iOS version and app version.</li>
-              <li><B>Firebase Performance Monitoring</B> — timings such as how long the app takes to start and how long network requests take.</li>
+              <li><B>Firebase Crashlytics</B> — crash reports: what the app was doing when it crashed, device model, iOS or Android version and app version. On Android, crash reports also include your account ID.</li>
+              <li><B>Firebase Performance Monitoring</B> (iPhone only) — timings such as how long the app takes to start and how long network requests take.</li>
               <li><B>Google Analytics for Firebase</B> — basic usage such as app opens, sessions and screens viewed, with an app-instance identifier, device type and approximate region (derived from your IP address).</li>
             </List>
             <P>We use this only to fix problems and improve the app — never for advertising.</P>
 
             <H3>Purchases</H3>
             <P>
-              Pro is bought through Apple&apos;s App Store. Apple handles payment; we never receive your card or billing details. The app only learns which plan you have so it can unlock features.
+              Pro is bought through Apple&apos;s App Store on iPhone and through Google Play on Android. Apple or Google handles payment; we never receive your card or billing details. The app only learns which plan you have so it can unlock features.
             </P>
           </Section>
 
           <Section id="not-collect">
-            <P>ForeverDays does <B>not</B> access your contacts, precise location, camera, microphone or health data. It does not ask for permission to track you, and it contains no advertising.</P>
+            <P>ForeverDays does <B>not</B> access your contacts, precise location, camera, microphone or health data. It contains no advertising, and on iPhone it does not ask for permission to track you.</P>
           </Section>
 
           <Section id="use">
             <List>
               <li>To provide the app: show your dates, schedule your reminders, and keep your data in sync and backed up across your devices.</li>
-              <li>To restore your data when you sign in on a new or reset iPhone.</li>
+              <li>To restore your data when you sign in on a new or reset phone.</li>
               <li>To unlock the features of your plan.</li>
               <li>To answer support requests and fix crashes and bugs.</li>
               <li>To understand, in aggregate, how the app is used so we can improve it.</li>
@@ -222,7 +222,7 @@ export default function ForeverDaysPrivacyPage() {
                 <B>Google Firebase</B> (Authentication, Cloud Firestore and Cloud Storage) holds your account, your backed-up dates, people and photos, and your profile. Security rules let each account read and write only its own data.
               </li>
               <li>
-                <B>Apple</B> handles Sign in with Apple and App Store purchases; <B>Google</B> handles Sign in with Google, plus Crashlytics, Performance Monitoring and Analytics.
+                <B>Apple</B> handles Sign in with Apple and App Store purchases; <B>Google</B> handles Sign in with Google, Google Play purchases and update checks, plus Crashlytics, Performance Monitoring and Analytics.
               </li>
             </List>
             <P>
@@ -232,7 +232,7 @@ export default function ForeverDaysPrivacyPage() {
 
           <Section id="on-device">
             <P>
-              Reminders and alarms are scheduled by iOS on your iPhone. Home Screen widgets read a copy of your upcoming dates that stays on the device. Your app settings are also kept only on your iPhone.
+              Reminders and alarms are scheduled on your phone by iOS or Android. Home screen widgets read a copy of your upcoming dates that stays on the device. Your app settings are also kept only on your phone.
             </P>
           </Section>
 
@@ -251,9 +251,9 @@ export default function ForeverDaysPrivacyPage() {
           <Section id="deletion">
             <P>We keep your data while you have an account. You stay in control:</P>
             <List>
-              <li><B>Settings › Data › Delete all data</B> permanently removes every date, reminder, checklist, note, photo and person from your iPhone and from your cloud backup. Your account remains.</li>
-              <li><B>Settings › Backup &amp; sync › Delete account</B> permanently deletes your account, your profile and everything backed up in Firebase, then removes your data from the iPhone.</li>
-              <li><B>Signing out</B> removes your data from that iPhone; it stays in your backup and returns when you sign in again.</li>
+              <li><B>Settings › Data › Delete all data</B> permanently removes every date, reminder, checklist, note, photo and person from your phone and from your cloud backup. Your account remains.</li>
+              <li><B>Settings › Backup &amp; sync › Delete account</B> permanently deletes your account, your profile and everything backed up in Firebase, then removes your data from the phone.</li>
+              <li><B>Signing out</B> removes your data from that phone; it stays in your backup and returns when you sign in again.</li>
             </List>
             <P>
               Crash reports, performance data and analytics are kept by Google for a limited time under its retention settings and are not tied to the content you create. If you can&apos;t use the app, email <Email /> from your account&apos;s address and we&apos;ll delete your data for you.
