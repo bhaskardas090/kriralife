@@ -10,7 +10,7 @@ import { CONTACT_EMAIL, ROUTES, SITE_NAME, WEBSITE_REF, absoluteUrl } from "@/li
 // Every statement here should match what the ForeverDays iOS app actually does
 // (ai-projects/forever-days). When the app starts collecting something new, update
 // this page and LAST_UPDATED before shipping that version.
-const LAST_UPDATED = { iso: "2026-10-28", label: "October 28, 2026" };
+const LAST_UPDATED = { iso: "2026-10-30", label: "October 30, 2026" };
 
 const title = "ForeverDays Privacy Policy";
 const description =
@@ -183,7 +183,7 @@ export default function ForeverDaysPrivacyPage() {
 
             <H3>Account and device details</H3>
             <P>
-              To support you and understand who uses the app, your account&apos;s profile stores: your plan (Free, Pro or Lifetime), how you signed in, the app version, iOS version, iPhone model, your device&apos;s region and language settings, your time zone, when the account was created, and when you last signed in and last opened the app.
+              To support you and understand who uses the app, your account&apos;s profile stores: your plan (Free or Pro), how you signed in, the app version, iOS version, iPhone model, your device&apos;s region and language settings, your time zone, when the account was created, and when you last signed in and last opened the app.
             </P>
 
             <H3>Diagnostics and usage</H3>
@@ -197,7 +197,7 @@ export default function ForeverDaysPrivacyPage() {
 
             <H3>Purchases</H3>
             <P>
-              Pro and Lifetime are bought through Apple&apos;s App Store. Apple handles payment; we never receive your card or billing details. The app only learns which plan you have so it can unlock features.
+              Pro is bought through Apple&apos;s App Store. Apple handles payment; we never receive your card or billing details. The app only learns which plan you have so it can unlock features.
             </P>
           </Section>
 
@@ -219,10 +219,7 @@ export default function ForeverDaysPrivacyPage() {
           <Section id="storage">
             <List>
               <li>
-                <B>Google Firebase</B> (Authentication, Cloud Firestore and Cloud Storage) holds your account, your backed-up dates and people, your profile and — on the Free and Pro plans — your backed-up photos. Security rules let each account read and write only its own data.
-              </li>
-              <li>
-                <B>Your own iCloud</B> — on the Lifetime plan, your photos are backed up to a private database in your iCloud account instead of Firebase. Those photos count against your iCloud storage and we can&apos;t see them.
+                <B>Google Firebase</B> (Authentication, Cloud Firestore and Cloud Storage) holds your account, your backed-up dates, people and photos, and your profile. Security rules let each account read and write only its own data.
               </li>
               <li>
                 <B>Apple</B> handles Sign in with Apple and App Store purchases; <B>Google</B> handles Sign in with Google, plus Crashlytics, Performance Monitoring and Analytics.
@@ -255,7 +252,7 @@ export default function ForeverDaysPrivacyPage() {
             <P>We keep your data while you have an account. You stay in control:</P>
             <List>
               <li><B>Settings › Data › Delete all data</B> permanently removes every date, reminder, checklist, note, photo and person from your iPhone and from your cloud backup. Your account remains.</li>
-              <li><B>Settings › Backup &amp; sync › Delete account</B> permanently deletes your account, your profile, everything backed up in Firebase, and your Lifetime photos in iCloud, then removes your data from the iPhone. If iCloud is turned off at that moment, any photos already in your iCloud stay there; you can remove them in iOS Settings › [your name] › iCloud.</li>
+              <li><B>Settings › Backup &amp; sync › Delete account</B> permanently deletes your account, your profile and everything backed up in Firebase, then removes your data from the iPhone.</li>
               <li><B>Signing out</B> removes your data from that iPhone; it stays in your backup and returns when you sign in again.</li>
             </List>
             <P>
